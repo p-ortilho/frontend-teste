@@ -1,0 +1,50 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: auto;
+}
+
+
+img {
+    width: 350px;
+}
+
+.titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+}
+
+.container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+button {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #92E3A9;
+}
