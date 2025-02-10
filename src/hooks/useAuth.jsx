@@ -134,10 +134,28 @@ export const useAuth = () => {
     return data;
   }
 
-  async function atualizarServico(servico, data, horario) {
-    console.log(servico, data, horario, user.email)
+  async function atualizarServico(servico, data, hora) {
+    const token = localStorage.getItem("token");  
+    const response = await fetch("http://127.0.0.1:5000/auth/meus-agendamentos", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        servico: servico,
+        data: data,
+        hora: hora,
+        email: user.email,
+      }),
+    });
+
+    if (response.ok) {
+      return { success: true };
+    } else {
+      return { success: false };
+    }
   }
-  
 
   async function teste() {
     const response = await fetch("http://127.0.0.1:5000/");

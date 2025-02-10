@@ -19,11 +19,18 @@ const FormularioAtualizar = ({ setOpen }) => {
     carregarServicos();
   }, []);
 
-  const atualizar = (e) => {
+  const atualizar = async (e) => {
     e.preventDefault();
-    atualizarServico(servico.servico, servico.data, servico.horario);
-    setOpen(false);
+    const resultado = await atualizarServico(servico.servico, servico.data, servico.horario);
+    if (resultado.success) {
+      const dados = await listagemServicos();
+      setListaServicos(dados);
+      setOpen(false);
+    } else {
+      alert("Erro ao atualizar o serviço");
+    }
   };
+
 
   return (
     <form onSubmit={atualizar} className={style.form__atualizar}>

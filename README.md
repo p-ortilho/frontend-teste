@@ -1,8 +1,30 @@
-# React + Vite
+# Salão da Leila
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📝 Descrição
+O Salão da Leila é um sistema de agendamento online para salão de beleza, desenvolvido para facilitar a gestão de reservas e atendimentos. O projeto possui um sistema de autenticação com login e registro de usuários, além de rotas protegidas para garantir a segurança das informações.
 
-Currently, two official plugins are available:
+### Funcionalidades Principais:
+- Sistema de Login e Registro de usuários
+- Agendamento de serviços
+- Visualização de reservas
+- Interface intuitiva com layout responsivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
+- React
+- JavaScript/JSX
+- React Router
+- Context API
+- Hooks
+- Consumo de API
+- CSS
+
+## 📦 Pré-requisitos
+- Node.js (versão 14.0 ou superior)
+- npm ou yarn
+
+## 🛠️ Instalação
+Lembre-se de rodar primeiro a api do repositorio: 
+
+1. Clone o repositório
+2. Instale as dependencias
+3. Rode o projeto
