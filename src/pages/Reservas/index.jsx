@@ -12,9 +12,9 @@ const Reservas = () => {
         async function carregarServicos() {
             const dados = await servicosAtuais();
             setListaServicos(dados);
+            setOpen(false);
         }
         carregarServicos();
-
     }, []);
 
 
@@ -28,7 +28,8 @@ const Reservas = () => {
                         id={servico.id}
                         data={servico.data} 
                         horario={servico.hora} 
-                        servico={servico.servico} 
+                        servico={servico.servico}
+                        setOpen={setOpen}
                     />
                 ))}
             </div>

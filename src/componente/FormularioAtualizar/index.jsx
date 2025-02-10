@@ -3,7 +3,7 @@ import { useAuth } from "../../hooks/useAuth";
 import style from "./FormularioAtualizar.module.css";
 
 const FormularioAtualizar = ({ setOpen }) => {
-  const { listagemServicos } = useAuth();
+  const { listagemServicos, atualizarServico } = useAuth();
   const [listaServicos, setListaServicos] = useState([]);
   const [servico, setServico] = useState({
     servico: "", 
@@ -19,15 +19,14 @@ const FormularioAtualizar = ({ setOpen }) => {
     carregarServicos();
   }, []);
 
-  const handleSubmit = (e) => {
+  const atualizar = (e) => {
     e.preventDefault();
-    console.log(servico);
-    // Aqui você pode adicionar sua lógica de atualização
+    atualizarServico(servico.servico, servico.data, servico.horario);
     setOpen(false);
   };
 
   return (
-    <form onSubmit={handleSubmit} className={style.form__atualizar}>
+    <form onSubmit={atualizar} className={style.form__atualizar}>
         <div className={style.formAtualizar}>
           <label htmlFor="servico">Serviço</label>
           <select

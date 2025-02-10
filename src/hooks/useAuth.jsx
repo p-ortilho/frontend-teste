@@ -134,6 +134,11 @@ export const useAuth = () => {
     return data;
   }
 
+  async function atualizarServico(servico, data, horario) {
+    console.log(servico, data, horario, user.email)
+  }
+  
+
   async function teste() {
     const response = await fetch("http://127.0.0.1:5000/");
 
@@ -149,5 +154,6 @@ export const useAuth = () => {
     MeusServicos,
     listagemServicos,
     servicosAtuais,
+    atualizarServico,
   };
 };
